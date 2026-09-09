@@ -326,7 +326,14 @@ export const MEMORY_CONFIG = {
       splitLongFragments  : (process.env.MEMENTO_CONSOLIDATE_SPLIT_LONG ?? "true") === "true",
       detectContradictions: (process.env.MEMENTO_CONSOLIDATE_DETECT_CONTRADICT ?? "true") === "true",
       compressOldFragments: (process.env.MEMENTO_CONSOLIDATE_COMPRESS_OLD ?? "false") === "true"
-    }
+    },
+    /**
+     * promote_anchors stage 활성화 플래그.
+     * 기본 true — access_count >= 10, importance >= 0.8 파편을 is_anchor=TRUE로 자동 승격한다.
+     * false면 stage는 UPDATE 없이 status="skipped"를 반환한다. anchor를 수동 감사·승인으로만
+     * 관리하는 운영 환경용 opt-out이며, 승격 기준 자체는 바꾸지 않는다.
+     */
+    autoPromoteAnchors: (process.env.MEMENTO_AUTO_PROMOTE_ANCHORS ?? "true") === "true"
   },
   /** 긴 파편 분할 정책 (Gemini CLI 사용) */
   fragmentSplit: {

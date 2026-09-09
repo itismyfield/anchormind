@@ -1312,7 +1312,7 @@ FragmentSearch는 검색 파이프라인 결과 생성에만 집중하고, 부�
 | 10 | retro_link | 소급 링킹 |
 | 11 | utility_score_update | utility_score 갱신 |
 | 12 | requeue_high_ema | EMA 높은 저품질 파편 재평가 큐 등록 |
-| 13 | promote_anchors | anchor 승격 |
+| 13 | promote_anchors | anchor 승격 (access_count≥10·importance≥0.8). `MEMENTO_AUTO_PROMOTE_ANCHORS=false`면 skipped |
 | 14 | detect_contradictions | 모순 감지 |
 | 15 | detect_supersessions | supersede 관계 감지 |
 | 16 | process_pending_contradictions | 보류 모순 처리 |

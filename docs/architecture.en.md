@@ -1231,7 +1231,7 @@ Current 22 stages (in order):
 | 10 | retro_link | Retroactive linking |
 | 11 | utility_score_update | utility_score refresh |
 | 12 | requeue_high_ema | Re-queue high-EMA low-quality fragments |
-| 13 | promote_anchors | Anchor promotion |
+| 13 | promote_anchors | Anchor promotion (access_count≥10·importance≥0.8). Skipped when `MEMENTO_AUTO_PROMOTE_ANCHORS=false` |
 | 14 | detect_contradictions | Contradiction detection |
 | 15 | detect_supersessions | Supersede relation detection |
 | 16 | process_pending_contradictions | Pending contradiction processing |
